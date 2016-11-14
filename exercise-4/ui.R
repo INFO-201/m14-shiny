@@ -2,7 +2,7 @@
 library(shiny)
 library(plotly)
 shinyUI(navbarPage('Electoral College',
-                   # Create a title
+                   # Create a tab panel for your map
                    tabPanel('Map',
                             titlePanel('Electoral College Votes'),
                             # Create sidebar layout
@@ -20,23 +20,22 @@ shinyUI(navbarPage('Electoral College',
                                 plotlyOutput('map')
                               )
                             )
-                   ), 
-                   tabPanel('Scatter',
-                            titlePanel('Population v.s. Vote Power'),
-                            # Create sidebar layout
-                            sidebarLayout(
+                   ) 
+                   
+                   # Create a tabPanel to show your scatter plot
+                   
+                            # Add a titlePanel to your tab
+                   
+                            
+                            # Create a sidebar layout for this tab (page)
+                   
                               
-                              # Side panel for controls
-                              sidebarPanel(
+                              # Create a sidebarPanel for your controls
+                   
                                 
-                                # Text input for searching for a state
-                                textInput('search', label="Find a State", value = '')
-                              ),
+                                # Make a textInput widget for searching for a state in your scatter plot
+                   
                               
-                              # Main panel: display plotly Scatter plot
-                              mainPanel(
-                                plotlyOutput('scatter')
-                              )
-                            )
-                   )
+                              # Create a main panel, in which you should display your plotly Scatter plot
+                              
 ))
